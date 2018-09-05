@@ -1,0 +1,85 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "birthday guru",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "YourBirthdayDate",
+          "slots": [
+            {
+              "name": "birthday",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "samples": [
+            "what day was it {birthday}",
+            "when was i born {birthday}",
+            "in what day was i born in {birthday}",
+            "i am born in {birthday}",
+            "i am born in {birthday} what day was it"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "YourBirthdayDate",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "birthday",
+              "type": "AMAZON.DATE",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.132019155304.1204093009620"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.132019155304.1204093009620",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "when are you born?"
+          },
+          {
+            "type": "PlainText",
+            "value": "please tell me your birthday?"
+          },
+          {
+            "type": "PlainText",
+            "value": "what is your birthday?"
+          }
+        ]
+      }
+    ]
+  }
+}
